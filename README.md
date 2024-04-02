@@ -1,10 +1,10 @@
 # Tip Calculator
 
+**Description**: Create a tip Calculator from the FrontEndMentor starter
+
 **Name**: Michael Heckerman
 
 **Date**: 4/2/24
-
-**Figma**: ![alt text](../tip-calculator-app-main/design/desktop-design-empty.jpg)
 
 **Vercel**: https://tipcalculator-kappa.vercel.app/
 
