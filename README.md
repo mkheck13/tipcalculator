@@ -2,7 +2,7 @@
 
 **Description**: Create a tip Calculator from the FrontEndMentor starter
 
-![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Tip calculator app coding challenge](./src/app/design/desktop-design-empty.jpg)
 
 **Name**: Michael Heckerman
 
