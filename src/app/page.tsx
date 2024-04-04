@@ -61,7 +61,7 @@ export default function Home() {
             <span className="absolute flex items-center my-5 mx-2">
               {dollarIconComponent()}
             </span>
-            <input id="BillInput" type="Bill" inputMode="numeric" name="Bill" className="text-end text-VDcyan text-2xl mt-1 px-3 py-2 bg-VLGcyan border-2 border-transparent shadow-sm placeholder-slate-400 focus:outline-none focus:border-Scyan block w-full rounded-md" placeholder="0" value={billInputVal} onChange={(e) => {setBillVal(Number.parseInt(e.target.value)), setBillInputVal(e.target.value)}} />
+            <input onKeyDown={(evt) => ["e", "E", "+", "-"].includes(evt.key) && evt.preventDefault()} id="BillInput" type="number" inputMode="numeric" name="Bill" className="text-end text-VDcyan text-2xl mt-1 px-3 py-2 bg-VLGcyan border-2 border-transparent shadow-sm placeholder-slate-400 focus:outline-none focus:border-Scyan block w-full rounded-md" placeholder="0" value={billInputVal} onChange={(e) => {setBillVal(Number.parseInt(e.target.value)), setBillInputVal(e.target.value)}} />
           </label>
 
           <div className="block">
@@ -85,11 +85,11 @@ export default function Home() {
             <span className="absolute flex items-center my-5 mx-2">
               {personIconComponent()}
             </span>
-            <input id="PplInput" type="People" name="People" className="text-end  text-VDcyan text-2xl border-2 border-transparent mt-1 px-3 py-2 bg-VLGcyan shadow-sm placeholder-slate-400 focus:outline-none focus:border-Scyan block w-full rounded-md" placeholder="0" min={1} aria-required="true" value={pplInputVal} onChange={(e) => {setPplVal(Number.parseInt(e.target.value)), setPplInputVal(e.target.value)}} />
+            <input onKeyDown={(evt) => ["e", "E", "+", "-"].includes(evt.key) && evt.preventDefault()} id="PplInput" type="Number" name="People" className="text-end  text-VDcyan text-2xl border-2 border-transparent mt-1 px-3 py-2 bg-VLGcyan shadow-sm placeholder-slate-400 focus:outline-none focus:border-Scyan block w-full rounded-md" placeholder="0" min={1} aria-required="true" value={pplInputVal} onChange={(e) => {setPplVal(Number.parseInt(e.target.value)), setPplInputVal(e.target.value)}} />
           </label>
 
         </div>
-        <div className="flex flex-col justify-between col w-full h-72 md:w-1/2 mr-8 md:mr-12 ml-8 my-8 p-8 bg-VDcyan rounded-3xl">
+        <div className="flex flex-col justify-between col w-full min-h-64 md:w-1/2 mr-8 md:mr-12 ml-8 my-8 p-8 bg-VDcyan rounded-3xl">
           <div className="row h-2/5 flex flex-col justify-between gap-y-4">
             <div className="row flex flex-row justify-between">
               <p className="text-white md:text-lg">Tip Amount<br /><span className="text-DGcyan text-md">/ person</span></p>
@@ -101,7 +101,7 @@ export default function Home() {
             </div>
           </div>
           <div className="row">
-            <button className="w-full h-12 bg-Scyan rounded-lg text-3xl text-DGcyan" onClick={() => { handleReset() }}>RESET</button>
+            <button className="w-full h-12 bg-Scyan rounded-lg text-3xl text-DGcyan hover:bg-LGcyan" onClick={() => { handleReset() }}>RESET</button>
           </div>
         </div>
       </div>
